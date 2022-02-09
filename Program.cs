@@ -6,34 +6,33 @@ namespace MCCLOSKEY___T_3___Using_Iterative_Statements
     {
         public static void Main()
         {
-            // int variable for inc vaue for CAD in table
+            // int variable for CAD
             int inc_value;
 
-            // input inc_value between 5 and 25
+            // input between 5 and 25
             // with input validation if, input value is outside 5-25
             while (true)
             {
                 // input
-                Console.Write("Enter increment value between 5 and 25 :");
+                Console.Write("Enter increment value between 5 and 25:");
                 inc_value = Convert.ToInt32(Console.ReadLine());
                 // check if between 5 and 25
                 if (inc_value >= 5 && inc_value <= 25)
                 {
                     break;
                 }
-                // if not ask again
+                // if not,ask once more
                 Console.WriteLine("Increment value must be between 5 and 25. Please try again.");
             }
 
-            // variable for CAD an USD
+            // variable for CAD and USD
             double CAD = 0, USD;
 
-            // headers for table
+            // headers
             Console.WriteLine("CAD   US$");
             Console.WriteLine("-------------");
 
             // do-while loop
-            // do
             do
             {
                 // calculate USD for CAD
@@ -42,9 +41,10 @@ namespace MCCLOSKEY___T_3___Using_Iterative_Statements
                 // print 
                 Console.WriteLine(CAD + "    " + USD);
 
-                // increament CAD by inc_value
+                // increment CAD by inc_value
                 CAD += inc_value;
-            }//while, conditiom
+            }
+            //while, conditiom
             while (CAD <= 200);
         }
     }
